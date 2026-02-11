@@ -427,8 +427,7 @@
 <div class="contact-form">
   <h3>Send us a Message</h3>
 
-  <form action="https://formspree.io/f/mzdaznkd" method="POST">
-  <input type="hidden" name="_next" value="thankyou.html">
+  <form id="contactForm" action="https://formspree.io/f/mzdaznkd" method="POST" target="hidden_iframe">
   <input type="hidden" name="_subject" value="New Inquiry from Venox Website">
 
   <div class="form-row">
@@ -464,6 +463,7 @@
   </button>
 </form>
 
+
 </div>
 
       <!-- RIGHT : INFO -->
@@ -485,7 +485,7 @@
           </div>
           <div>
             <h4>Call Us</h4>
-            <p> +91 99246 18871</p>
+            <a href="tel:+91 99246 18871"><p> +91 99246 18871</p></a>
           </div>
         </div>
 
@@ -495,7 +495,7 @@
           </div>
           <div>
             <h4>Email Us</h4>
-            <p>info@venox.co.in</p>
+            <a href="mailto:info@venox.co.in"><p>info@venox.co.in</p></a>
           </div>
         </div>
 
@@ -536,6 +536,8 @@
   scrolling="no">
 </iframe>
 
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -552,6 +554,15 @@
       }
       setInterval(autoSlide, 4000);
     }
+  });
+
+
+  const form = document.getElementById('contactForm');
+
+  form.addEventListener('submit', function () {
+    setTimeout(() => {
+      window.location.href = "thankyou.html";
+    }, 800);
   });
 </script>
 
