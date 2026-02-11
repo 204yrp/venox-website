@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You - Venox</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0b1c3d, #112a5c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #fff;
+    }
+
+    .thank-box {
+      background: #ffffff;
+      color: #0b1c3d;
+      padding: 50px 40px;
+      border-radius: 16px;
+      text-align: center;
+      max-width: 420px;
+      width: 90%;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+      animation: pop 0.6s ease;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .thank-box h1 {
+      margin-bottom: 10px;
+      font-size: 32px;
+    }
+
+    .thank-box p {
+      font-size: 16px;
+      opacity: 0.8;
+    }
+
+    .thank-box a {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 28px;
+      background: #ff6a00;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .thank-box a:hover {
+      background: #e55d00;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="thank-box">
+    <h1>Thank You! 🙌</h1>
+    <p>We’ve received your message. Our team will get back to you shortly.</p>
+    <a href="index.html">← Back to Home</a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        /* FOOTER MAIN STYLING */
+        /* FOOTER */
+/* FOOTER */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* iframe અંદર scroll stop */
+  display: block; /* વ્હાઇટ સ્પેસ રોકવા માટે */
+  cursor: pointer;
+}
+
+.footer {
+  background: linear-gradient(135deg, #0b1c3d, #08162f);
+  color: #fff;
+  padding: 70px 8% 20px;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box; /* પેડિંગના લીધે હાઇટ ન વધે તે માટે */
+}
+
+.footer-container {
+  display: grid;
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns: 1fr 0.8fr 1.5fr 1fr; /* Locations ને થોડી વધુ જગ્યા આપી */
+  gap: 40px;
+}
+
+.footer-col h4 {
+  margin-top: 10px;
+}
+
+
+/* --- નવો હેડિંગ ક્લાસ (અહીંથી તમે ફેરફાર કરી શકશો) --- */
+        .footer-heading {
+          margin-bottom: 25px;
+          font-size: 20px;
+          font-weight: 600;
+          text-align: left; /* બધા હેડિંગ ડાબી બાજુ સેટ કર્યા */
+          color: #ffffff; /* તમે અહીંથી હેડિંગનો કલર બદલી શકો છો */
+          position: relative;
+          display: block;
+        }
+
+        /* હેડિંગ નીચે ઓરેન્જ લાઈન ઉમેરવા માટે (જો જોઈતી હોય તો) */
+        .footer-heading::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -8px;
+          width: 35px;
+          height: 2px;
+          background: #ff7a00;
+        }
+
+/* .footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-circle {
+  width: 45px;
+  height: 45px;
+  background: #ff7a00;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+} */
+
+.footer-logo-img {
+  height: 45px; /* તમે જરૂર મુજબ વધારી શકો છો */
+  width: auto;
+  display: block;
+  margin-bottom: 10px;
+  
+  /* લોગોને ઓરેન્જ (Orange) બનાવવા માટે નીચેનું ફિલ્ટર વાપરો */
+  /* filter: invert(51%) sepia(91%) saturate(2374%) hue-rotate(360deg) brightness(101%) contrast(105%); */
+  filter: brightness(0) invert(1);
+}
+
+.footer p {
+  color: #cfd8e3; 
+  line-height: 1.6;
+  margin: 20px 0;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li  {
+  margin-bottom: 13px;
+  color: #cfd8e3;
+}
+
+.footer-col ul li i {
+  color: #ff7a00;
+  margin-right: 8px;
+}
+.footer-col ul li:hover {
+  color: #ff7a00;
+  
+}
+
+.footer-col ul li a {
+  color: inherit;        /* text color same rahe */
+  text-decoration: none; /* underline remove */
+}
+
+.footer-col ul li a:hover {
+  color: #ff7a00;
+}
+
+/* Locations સેક્શન માટે ખાસ સુધારો */
+.location-list {
+  padding: 0;
+  margin: 0;
+  
+}
+
+.location-list li {
+  position: relative;
+   /* આઇકન માટે જગ્યા */
+  line-height: 1.6;
+  font-size: 14px;
+  margin-bottom: 20px !important;
+  color: #cfd8e3;
+  text-align: justify; /* આનાથી લખાણ બંને બાજુથી સીધું દેખાશે */
+}
+
+/* લોકેશન આઇકન ઉમેરવા માટે */
+
+
+.location-list li strong {
+  display: block;
+  margin-top: 5px;
+  color: #fff;
+  font-weight: 600;
+  text-align: left; /* ફોન નંબર ડાબી બાજુ રાખવો વધુ પ્રોફેશનલ લાગે છે */
+}
+
+
+
+
+.footer-services li a {
+  color: #cfd8e3;         /* Links no color white thase */
+  text-decoration: none;  /* Underline nikli jashe */
+  transition: 0.3s;
+}
+
+.footer-services li a:hover {
+  color: #ff7a00;         /* Hover kare tyre orange color thase (optional) */
+}
+
+/* Tamara existing ".footer-col ul li" ma pan changes kari shakay */
+.footer-col ul li a {
+  color: #cfd8e3;
+  text-decoration: none;
+}
+
+.contact-list li {
+          display: flex;
+          align-items: center;
+          gap: 2px;
+        }
+
+        .contact-list i {
+          color: #ff7a00;
+          width: 20px;
+        }
+
+
+
+/* Social Icons */
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            background: rgba(255,255,255,0.1);
+            padding: 10px;
+            border-radius: 8px;
+            color: white;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 25px;
+            height: 25px;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            background: #ff7a00;
+            transform: translateY(-3px);
+        }
+
+/* Bottom Bar */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 40px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between; /* left & right */
+  align-items: center;
+  color: #cfd8e3;
+  flex-wrap: wrap;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-links a {
+  color: #cfd8e3;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #ff7a00;
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media(max-width: 500px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+  .footer-bottom {
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+    </style>
+</head>
+<body>
+
+   <!-- FOOTER START -->
+<!-- FOOTER START -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Company Info -->
+    <div class="footer-col">
+      <div class="footer-logo">
+        <a href="#">
+          <img src="assets/images/logo.jpg" alt="Venox Logo" class="footer-logo-img">
+        </a>
+        
+      </div>
+      <p>
+        Leading provider of technology solutions for theme parks and water parks worldwide.
+        Creating extraordinary experiences since 2011.
+      </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-col">
+     
+      <h4 class="footer-heading">Services</h4>
+      <ul class="footer-services">
+       <li><a href="#services">RFID Band Control</a></li>
+       <li><a href="#services">Food Counter Management</a></li>
+       <li><a href="#services">POS System</a></li>
+       <li><a href="#services">Digital Display Solution</a></li>
+       <li><a href="#services">Access Control System</a></li>
+      </ul>
+    </div>
+
+    <!-- Locations -->
+    <div class="footer-col">
+  <h4 class="footer-heading">Our Locations</h4>
+  <ul class="location-list">
+    <li>
+      418, 419, 420, Silicon Sponta, Radhanpur Road, Mehsana (Gujrat)<br>
+      <strong>Phone: +91 90332 47717</strong>
+    </li>
+    
+    <li>
+      504, Ganesh Glory, Godrej Garden City Road, Jagatpur, Ahmedabad (Gujrat)<br>
+      <strong>Phone: +91 76007 23488</strong>
+    </li>
+    
+    <li>
+      156, 157, 2nd Floor, Sona Complex, Nr. Kansa Cross Road, Visnagar (Gujrat)<br>
+      <strong>Phone: +91 99246 18871</strong>
+    </li>
+    
+    <li>
+      7/C Bombay Talkies Compound, Malad West, Mumbai, Maharashtra<br>
+      <strong>Phone: +91 99246 18871</strong>
+    </li>
+  </ul>
+</div>
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h4 class="footer-heading">Get In Touch</h4>
+      <ul class="contact-list">
+        <li>
+            <i class="fa fa-phone"></i>
+            <a href="tel:+919924618871">+91 99246 18871</a>
+        </li>
+
+      <li>
+            <i class="fa fa-envelope"></i>
+            <a href="mailto:info@venox.co.in">info@venox.co.in</a>
+      </li>
+        <li><i class="fa fa-map-marker-alt"></i> 418, 419, 420, Silicon Sponta, Radhanpur Road, Mehsana (Gujrat)</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>© 2026 Venox Solutions. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

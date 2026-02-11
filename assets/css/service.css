@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* NAVBAR STYLES */
+/* NAVBAR STYLES */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 45px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-left { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+.navbar-logo-img {
+  height: 40px; /* નેવબાર ની હાઈટ મુજબ તમે આ વધારી-ઘટાડી શકો છો */
+  width: auto;  /* રેશિયો જાળવી રાખવા માટે */
+  display: block;
+  
+  
+}
+.nav-left h2 { 
+    font-size: 18px; 
+    color: #111; 
+}
+.nav-menu { 
+    display: flex; 
+    list-style: none; 
+    gap: 30px; 
+}
+.nav-menu a { 
+    text-decoration: none; 
+    color: #222; 
+    font-weight: 500; 
+    transition: 0.3s; 
+}
+.nav-menu a:hover { 
+    color: #ff7a00; 
+}
+
+.nav-btn {
+  border: 2px solid #ff6a00;
+  color: #ff6a00; 
+  padding: 10px 22px; 
+  border-radius: 25px;
+  text-decoration: none; 
+  font-size: 15px; 
+  transition: 0.3s;
+  font-weight: 600;
+}
+.nav-btn i{
+    margin-right: 5px;
+}
+.nav-btn:hover{
+    background-color: #ff6a00;
+    color: #fff;
+}
+
+/* SERVICE PAGE STYLES */
+.service-hero {
+  padding: 200px 20px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 75vh; /* આનાથી ઈમેજ સ્ક્રીનના 60% ભાગ જેટલી મોટી દેખાશે */
+  text-align: center;
+  
+}
+.service-hero h1 {
+  max-width: 1200px;
+  margin: auto;
+  color: #ffffff;
+  font-size: 56px; /* ટેક્સ્ટ પણ થોડા મોટા કર્યા છે */
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* ટેક્સ્ટ વધુ ક્લિયર દેખાય તે માટે */
+}
+
+.container { 
+    width: 90%; 
+    max-width: 1200px; 
+    margin: auto; 
+}
+.service-grid {
+  display: grid; 
+  grid-template-columns: 1.1fr 1fr; 
+  gap: 60px;
+  align-items: center; 
+  margin-top: 60px; 
+  padding-bottom: 80px;
+}
+
+/* LEFT CONTENT */
+.desc { color: #64748b; 
+    line-height: 1.8; 
+    margin-bottom: 30px; 
+    font-size: 17px; }
+.service-content h3 { 
+    font-size: 22px; 
+    margin-bottom: 20px; 
+    color: #0f172a; 
+    font-weight: 700; }
+
+/* KEY FEATURES - VIDEO STYLE */
+.features { 
+    list-style: none; 
+    margin-bottom: 35px; 
+}
+.features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: #334155;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.features li i {
+  color: #f97316; /* Orange color for icons */
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+/* HOVER EFFECT ON LIST ITEMS */
+.features li:hover {
+  color: #f97316;
+  transform: translateX(8px); /* સહેજ જમણી બાજુ ખસશે */
+}
+
+.features li:hover i {
+  transform: scale(1.2); /* આયકન મોટો થશે */
+}
+
+/* BUTTON - INTERACTIVE */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #f97316;
+  color: #fff;
+  padding: 15px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+}
+
+.btn-primary i { 
+    transition: transform 0.3s ease; 
+}
+
+.btn-primary:hover {
+  background: #ea580c;
+  transform: translateY(-3px); /* બટન થોડું ઉપર જશે */
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.4);
+}
+
+.btn-primary:hover i {
+  transform: translateX(5px); /* એરો જમણી બાજુ ખસશે */
+}
+
+/* IMAGE - HOVER WITH SHADOW */
+.service-image {
+  width: 100%;
+  aspect-ratio: 1/ 1;   /* 👈 square banavse */
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(17, 14, 14, 0.1);
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* 👈 image stretch nahi thay */
+  transition: all 0.5s ease;
+  box-shadow: 0 10px 30px rgba(17, 14, 14, 0.1);
+  display: block;
+}
+
+.service-image:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .service-grid { grid-template-columns: 1fr; gap: 40px; }
+  .service-image { order: -1; }
+  .service-hero h1 { font-size: 36px; }
+}
+
+
+.footer-iframe {
+            width: 100%;
+            height: 600px;   /* footer full show થાય એ માટે */
+            border: none;
+            display: block;
+            overflow: hidden; /* iframe scroll hide */
+        }
