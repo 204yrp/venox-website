@@ -88,7 +88,31 @@
             padding: 40px 20px;
         }
 
-        
+        /* Back to Home Button */
+        .back-nav {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .back-nav a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #ff8c00;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 50px;
+            border: 2px solid #ff8c00;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .back-nav a:hover {
+            background-color: #ff8c00;
+            color: #fff;
+            transform: translateX(-5px);
+            box-shadow: 0 6px 15px rgba(255, 140, 0, 0.3);
+        }
 
         /* Header Section */
         .header-section {
@@ -315,7 +339,9 @@
 
 <div class="container">
     
-
+<div class="back-nav">
+        <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+    </div>
     <section class="header-section">
         <h1>What Our <span class="highlight">Clients</span> Say</h1>
         <p>Discover why top water parks and amusement destinations across India trust Venox for reliable solutions.</p>
@@ -324,7 +350,7 @@
     <div class="stats-grid">
         <div class="stat-card">
             <div class="icon-box ic-1"><i class="fa-solid fa-users"></i></div>
-            <h2>50+</h2>
+            <h2>10+</h2>
             <p>Happy Clients</p>
         </div>
         <!-- <div class="stat-card">
