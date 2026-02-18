@@ -632,20 +632,20 @@ body {
 /* SLIDER CONTAINER - સ્લાઇડરની હાઇટ ફિક્સ કરી */
 .logo-slider-full {
   width: 100%;
-  height: 200px; 
-  margin: auto;
-  position: relative;
+  height: 200px;
   overflow: hidden;
   display: flex;
   align-items: center;
-
+  position: relative;
 }
 
 .logo-track {
   display: flex;
-  width: calc(240px * 14); /* ગેપ જાળવવા માટે કેલ્ક્યુલેશન */
-  animation: scroll 20s linear infinite;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+  will-change: transform; /* 🔥 flexing / jerk fix */
 }
+
 .logo-track:hover {
   animation-play-state: paused;
 }
@@ -657,28 +657,25 @@ body {
 
 /* SLIDE BOX - બે લોગો વચ્ચેની સ્પેસ */
 .slide1 {
-  width: 200px; /* બોક્સની વિડ્થ ઘટાડી જેથી લોગો નજીક આવે */
-  height: 140px; /* હાઇટ ઘટાડી */
+  width: 200px;
+  height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  margin: 0 15px; /* આ માર્જિન ઘટાડવાથી લોગો વચ્ચેની સ્પેસ ઓછી થશે */
+  margin: 0 20px;
 }
 
 .slide1 img {
-  width: 150px; /* લોગોની સાઈઝ */
+  width: 150px;
   height: 150px;
   object-fit: contain;
-  /* opacity: 0.9; */
-  transition: all 0.4s ease;
-}
-/* INTERACTIVE HOVER */
-.slide1 img:hover {
-  opacity: 1;
-  transform: scale(1.15) translateY(-5px);
+  transition: all 0.3s ease;
 }
 
+.slide1 img:hover {
+  transform: scale(1.1) translateY(-4px);
+}
 
 /* KNOW MORE BUTTON - સ્લાઇડરની નીચેની સ્પેસ ઘટાડી */
 .clients-btn {
