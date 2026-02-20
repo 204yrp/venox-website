@@ -1110,6 +1110,10 @@ body {
   text-decoration: none;
 }
 
+.info-card a :hover  {
+  color: #ea580c;
+}
+
 .info-card p {
   color: #64748b;
   font-size: 14px;
