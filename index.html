@@ -438,7 +438,7 @@
 <div class="contact-form">
   <h3>Send us a Message</h3>
 
-  <form id="contactForm" action="https://formspree.io/f/mzdaznkd" method="POST" target="hidden_iframe">
+  <form action="sendmail.php" method="POST">
   <input type="hidden" name="_subject" value="New Inquiry from Venox Website">
 
   <div class="form-row">
@@ -562,7 +562,7 @@
   scrolling="no">
 </iframe>
 
-<iframe name="hidden_iframe" style="display:none;"></iframe>
+<!-- <iframe name="hidden_iframe" style="display:none;"></iframe> -->
 
 
 <script>
@@ -583,13 +583,13 @@
   });
 
 
-  const form = document.getElementById('contactForm');
+  // const form = document.getElementById('contactForm');
 
-  form.addEventListener('submit', function () {
-    setTimeout(() => {
-      window.location.href = "thankyou.html";
-    }, 800);
-  });
+  // form.addEventListener('submit', function () {
+  //   setTimeout(() => {
+  //     window.location.href = "thankyou.html";
+  //   }, 800);
+  // });
 
   
 </script>

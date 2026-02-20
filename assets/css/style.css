@@ -1145,7 +1145,7 @@ body {
 
 .footer-iframe {
   width: 100%;
-  height: 600px;   /* footer full show થાય એ માટે */
+  height: 598px;   /* footer full show થાય એ માટે */
   border: none;
   display: block;
   overflow: hidden; /* iframe scroll hide */
