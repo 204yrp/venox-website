@@ -21,7 +21,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Port       = 587;
 
         $mail->setFrom('vg.vsnoffice@gmail.com', 'Venox Website');
-        $mail->addAddress('vg.vsnoffice@gmail.com');
+        //$mail->setFrom('info@venox.co.in', 'Venox Inquiry');
+        $mail->addAddress('info@venox.co.in');
 
         $mail->Subject = "New Inquiry from Venox Website";
         $mail->Body =
