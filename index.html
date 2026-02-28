@@ -2,32 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Venox Solutions</title>
+  
+
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+ 
 
-</head>
-<body>
+ </head>
+ <body>
 
 <!-- TOP HEADER -->
 <div class="top-header">
-  <div class="top-left">
-    </div>
+  <div class="top-left"></div>
   <div class="top-right">
-    <a href="tel:+91 90332 47717">
-      <i class="fa fa-phone"></i>  +91 90332 47717
-    </a>
-    <a href="tel:+91 99246 18871">
-      <i class="fa fa-phone"></i>  +91 99246 18871
-    </a>
-    <a href="tel:+91 76007 23488">
-      <i class="fa fa-phone"></i>  +91 76007 23488
-    
-    
-    <a href="mailto:info@venox.co.in">
-      <i class="fa fa-envelope"></i> info@venox.co.in
-    </a>
+    <a href="tel:+919033247717"><i class="fa fa-phone"></i> +91 90332 47717</a>
+    <a href="tel:+919924618871"><i class="fa fa-phone"></i> +91 99246 18871</a>
+    <a href="tel:+917600723488"><i class="fa fa-phone"></i> +91 76007 23488</a>
+    <a href="mailto:info@venox.co.in"><i class="fa fa-envelope"></i> info@venox.co.in</a>
   </div>
 </div>
 
@@ -52,7 +46,7 @@
 </nav>
 
 <!-- SLIDER -->
-<section id="hero slide" class="hero-slider">
+<section id="hero-slide" class="hero-slider">
   <div class="slides">
 
     <div class="slide active" style="background-image: url('assets/images/sv.jpg');">
@@ -570,17 +564,17 @@
     const slides = document.querySelectorAll(".slide");
     let index = 0;
     if(slides.length > 0) {
-      function showSlide(i) {
-        slides.forEach(slide => slide.classList.remove("active"));
-        slides[i].classList.add("active");
-      }
-      function autoSlide() {
+      setInterval(() => {
+        slides[index].classList.remove("active");
         index = (index + 1) % slides.length;
-        showSlide(index);
-      }
-      setInterval(autoSlide, 4000);
+        slides[index].classList.add("active");
+      }, 4000);
     }
   });
+
+  // window.addEventListener("scroll", function () {
+  //   document.querySelector(".navbar").classList.toggle("scrolled", window.scrollY > 20);
+  // });
 
 
   // const form = document.getElementById('contactForm');
